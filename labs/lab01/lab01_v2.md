@@ -1,6 +1,7 @@
 **Лабораторная работа. Базовая настройка коммутатора**
+![image](https://github.com/user-attachments/assets/74eca304-35c7-45bd-bc9a-377c5b91a169)
 
-![alt text](image-3.png)
+
 
 
 
@@ -304,11 +305,16 @@ no shutdown
 Чтобы разрешить вход под указанным паролем
 
 
+
 •	**Настройте IP-адрес для ПК.**
-![alt text](image-4.png)
+
+![image](https://github.com/user-attachments/assets/ca88a51e-33f7-4b34-a391-2fc8db5b4ded)
+
 
 **Часть 3. Проверка сетевых подключений**
-![alt text](image-5.png)
+
+![image](https://github.com/user-attachments/assets/afa3c491-598a-468f-87b5-b624aedaf81e)
+
 
 
 
@@ -415,10 +421,12 @@ login
 end
 
 •	**Протестируйте сквозное соединение, отправив эхо-запрос.**
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/6ec98842-e255-41ba-a8ce-f223463ae0e1)
+
 
 •	**Протестируйте возможности удаленного управления с помощью Telnet**
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/dac90aba-e9e4-472b-aa4e-be962c555df5)
+
 
 **Проверьте параметры VLAN 1.**
 	
