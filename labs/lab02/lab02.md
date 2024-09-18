@@ -3,7 +3,8 @@
 !
 
 !
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/de30d107-8df2-4a6b-a265-0fb57dfb5d19)
+
 
 !
 
@@ -21,17 +22,20 @@
 
 
 
-![alt text](image-9.png)
+![image](https://github.com/user-attachments/assets/4f956650-b81c-47e4-bba7-2953a62ab361)
+
 
 !
 
 **Шаг 2. Настройте узлы ПК.**
 
 !
-![alt text](image-10.png)
+![image](https://github.com/user-attachments/assets/aa689989-b083-4c12-b6f0-6050ff9c9f17)
+
 
 !
-![alt text](image-11.png)
+![image](https://github.com/user-attachments/assets/39b578ee-8f7e-4dc7-a994-5950399cc350)
+
 
 !
 
@@ -282,11 +286,13 @@ end
 
 !
 
-![alt text](image-12.png)
+![image](https://github.com/user-attachments/assets/a497dc91-c59a-4fec-84ad-3faf9b31562e)
+
 
 !
 
-![alt text](image-13.png)
+![image](https://github.com/user-attachments/assets/69abbf6d-b5e6-4a03-9a72-02da35b4eabb)
+
 
 !
 
@@ -298,10 +304,12 @@ end
 
 !
 
-![alt text](image-14.png)
+![image](https://github.com/user-attachments/assets/54ab91a0-2cb9-4dd5-ade5-45bbe8a64a61)
+
 
 !
-![alt text](image-15.png)
+![image](https://github.com/user-attachments/assets/d1f86287-0213-4180-a9b8-418022929c92)
+
 
 !
 
@@ -320,10 +328,12 @@ MAC-адрес компьютера PC-B:000A:417D:6AA5
 
 !
 
-![alt text](image-16.png)
+![image](https://github.com/user-attachments/assets/6c33f835-eb6a-42cc-82e9-1191ca9b9d20)
+
 
 !
-![alt text](image-17.png)
+![image](https://github.com/user-attachments/assets/49215fb5-0d37-42d4-9996-1d0558ed18f7)
+
 
 !
 **Назовите адреса оборудования во второй строке выходных данных команды (или зашитый адрес — bia).**
@@ -350,7 +360,8 @@ MAC-адрес компьютера PC-B:000A:417D:6AA5
 
 !
 
-![alt text](image-18.png)
+![image](https://github.com/user-attachments/assets/c360b397-8d05-4111-b759-04539584f32d)
+
 
 после опроса в таблице появился макадрес компьютера на порту куда он подключен
 
@@ -360,7 +371,8 @@ MAC-адрес компьютера PC-B:000A:417D:6AA5
 !
 да
 
-![alt text](image-19.png)
+![image](https://github.com/user-attachments/assets/5fa42e4c-d800-49c0-a992-5356f3eebef6)
+
 
 
 **Какие МАС-адреса записаны в таблице? С какими портами коммутатора они сопоставлены и каким устройствам принадлежат?**
@@ -379,7 +391,8 @@ MAC-адрес компьютера PC-B:000A:417D:6AA5
 
  !
 
-![alt text](image-20.png)
+![image](https://github.com/user-attachments/assets/d344a91e-77a3-4448-8273-51771c2b5dc6)
+
 
 !
 **Через 10 секунд введите команду show mac address-table и нажмите клавишу ввода. Появились ли в таблице МАС-адресов новые адреса?**
