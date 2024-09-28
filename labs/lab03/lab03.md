@@ -14,7 +14,8 @@
 
 !
 
-![alt text](image-21.png)
+![image](https://github.com/user-attachments/assets/bdec4166-18cb-4070-b833-f9639e03e1a1)
+
 
 Решение :
 
@@ -84,7 +85,8 @@
 
 !
 
-![alt text](image-22.png)
+![image](https://github.com/user-attachments/assets/fb9dcc28-a3ac-4b26-9b56-3373ba8c79e2)
+
 
 !
 
@@ -119,7 +121,8 @@
 
 !
 
-![alt text](image-23.png)
+![image](https://github.com/user-attachments/assets/fbff06ec-2ff5-43e1-8407-a216b7680585)
+
 
 !
 
@@ -147,7 +150,8 @@
 
 !
 
-![alt text](image-24.png)
+![image](https://github.com/user-attachments/assets/2bbb3c57-bc65-41f3-b97a-292a8b495a3b)
+
 
 !
  
@@ -172,7 +176,8 @@
 
   !
 
-  ![alt text](image-25.png)
+  ![image](https://github.com/user-attachments/assets/9a1211a6-7ddd-4b2f-8833-360ad2fd604d)
+
 
   !
 
@@ -197,7 +202,8 @@
 
 !
 
-![alt text](image-26.png)
+![image](https://github.com/user-attachments/assets/8bc5bd0b-2849-4fb8-a8a3-5b63795c433b)
+
 
 !
 
