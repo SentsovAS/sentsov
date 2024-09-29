@@ -4,7 +4,8 @@
 
 !
 
-![alt text](image-27.png)
+![image](https://github.com/user-attachments/assets/c491ad36-ae91-4972-abbe-9de73f8de0d2)
+
 
 !
 
@@ -25,7 +26,8 @@ no ipv6 cef
 
 !
 
-![alt text](image-29.png)
+![image](https://github.com/user-attachments/assets/49b19e14-8514-49fc-8ec7-06993a025eec)
+
 
 !
  
@@ -36,7 +38,8 @@ no ipv6 cef
 
 hostname S1
 
-![alt text](image-28.png)
+![image](https://github.com/user-attachments/assets/ffac502a-181f-43af-9d9b-040a33b9b295)
+
 
 !
 
@@ -90,7 +93,8 @@ show ipv6 interface br
 
 !
 
-![alt text](image-30.png)
+![image](https://github.com/user-attachments/assets/7e2710d1-9097-47e1-9812-f474c7b4f9c3)
+
 
 !
 
@@ -109,7 +113,8 @@ show int g 0/0/0
 
 !
 
-![alt text](image-31.png)
+![image](https://github.com/user-attachments/assets/b7c588ad-0036-4f5c-941c-07194798fbe9)
+
 
 !
 
@@ -185,7 +190,8 @@ copy run start
 
 show ipv6 interface vlan1
 
-![alt text](image-32.png)
+![image](https://github.com/user-attachments/assets/a52cc094-f599-4ce4-a1ad-42fc7131aa2b)
+
 
 !
 
@@ -201,11 +207,13 @@ show ipv6 interface vlan1
 
 !
 
-![alt text](image-33.png)
+![image](https://github.com/user-attachments/assets/60a7227f-4493-45e9-95de-4a2bdf072c8c)
+
 
 !
 
-![alt text](image-34.png)
+![image](https://github.com/user-attachments/assets/42e0dc03-6fba-468b-bdd9-4235e33f1045)
+
 
 !
 **Часть 3. Проверка сквозного подключения**
@@ -216,7 +224,8 @@ show ipv6 interface vlan1
 
 !
 
-![alt text](image-35.png)
+![image](https://github.com/user-attachments/assets/f608aff6-7f43-4bc5-8d92-8b66b5bd6d7b)
+
 
 !
 
@@ -224,7 +233,8 @@ show ipv6 interface vlan1
 
 !
 
-![alt text](image-36.png)
+![image](https://github.com/user-attachments/assets/9bed2ca9-f683-459d-a9fd-3ac64d692b5c)
+
 
 !
 
@@ -232,7 +242,8 @@ show ipv6 interface vlan1
 
 !
 
-![alt text](image-37.png)
+![image](https://github.com/user-attachments/assets/736c52de-e3d7-410a-937a-57af2792bda3)
+
 
 !
 
@@ -240,7 +251,8 @@ show ipv6 interface vlan1
 
 !
 
-![alt text](image-38.png)
+![image](https://github.com/user-attachments/assets/3df68d6f-5908-4732-a36a-7e0a4a0b4f62)
+
 
 !
 
@@ -248,7 +260,8 @@ show ipv6 interface vlan1
 
 !
 
-![alt text](image-39.png)
+![image](https://github.com/user-attachments/assets/d1df511d-3d4c-4516-a9b9-36541ee33974)
+
 
 !
 **1.	Почему обоим интерфейсам Ethernet на R1 можно назначить один и тот же локальный адрес канала — FE80::1**
