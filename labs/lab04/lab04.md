@@ -213,10 +213,19 @@ show ipv6 interface vlan1
 
 ![image](https://github.com/user-attachments/assets/60a7227f-4493-45e9-95de-4a2bdf072c8c)
 
+!
+
+![image](https://github.com/user-attachments/assets/5fadcd50-e1b6-43f2-a427-fca3a0cb48d5)
+
 
 !
 
 ![image](https://github.com/user-attachments/assets/42e0dc03-6fba-468b-bdd9-4235e33f1045)
+
+!
+
+![image](https://github.com/user-attachments/assets/9fc4ed25-6ac5-4d31-9480-5083961eb1b9)
+
 
 
 !
