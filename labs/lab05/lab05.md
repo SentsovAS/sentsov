@@ -4,7 +4,8 @@
 
 !
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/7d94bc16-dee1-4df9-b0af-365f984bf209)
+
 
 !
 
@@ -144,7 +145,8 @@ Copy run start
 
 !
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/7a2c2974-c59f-4faa-8de0-55528bde3670)
+
 
 !
 
@@ -156,7 +158,8 @@ Copy run start
 
 !
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/f0035d4c-9feb-498e-bf8d-716715b55b29)
+
 
 !
 
@@ -223,7 +226,8 @@ password: Adm1nP@55
 
 !
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/d285011a-ea0d-4435-a434-d777c7602a28)
+
 
 !
 
@@ -235,7 +239,8 @@ password: Adm1nP@55
 
 !
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/28ea6e8f-0896-4972-8ba4-1d48568b139b)
+
 
 !
 
@@ -243,7 +248,8 @@ password: Adm1nP@55
 
 версия 1 и 2
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/a863f156-0443-41e9-84b0-8d4669586728)
+
 
 !
 
@@ -251,7 +257,7 @@ password: Adm1nP@55
 
 !
 
-добавить имя пользователя и пароль каждого пользователя в  помощью команды username
+добавить имя пользователя и пароль каждого пользователя с  помощью команды username
 
 
 
