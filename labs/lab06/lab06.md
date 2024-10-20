@@ -2,11 +2,13 @@
 
 !
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/3c411b43-8f0c-4039-8976-fdc9dbc12da6)
+
 
 !
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/db74da92-1638-4462-829c-6d336b7d92d8)
+
 
 !
 
@@ -152,11 +154,13 @@ Copy run start
 
 !
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/58060346-0c16-4af9-9df3-621ece95c91e)
+
 
 !
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/60595e13-43eb-4112-9378-c73d4ba1c1ae)
+
 
 !
 
@@ -320,7 +324,8 @@ do copy run start
 do show interfaces trunk
 !
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/ad1eeb50-8c59-4421-8b20-c4b67cf2e8cf)
+
 
 !
 
@@ -343,7 +348,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/feb6bfa8-6cba-45ec-a2ad-5665b40515dd)
+
 
 
 
@@ -456,11 +462,13 @@ Do Copy run start
 !
 **a.	Отправьте эхо-запрос с PC-A на шлюз по умолчанию.**
 
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/7215c802-e647-4136-8abb-d2ca56b87a7b)
+
 
 !
 
-![alt text](image-9.png)
+![image](https://github.com/user-attachments/assets/22180d82-1621-4869-8732-fa98be6d5f5b)
+
 
 !
 
@@ -468,7 +476,8 @@ Do Copy run start
 
 !
 
-![alt text](image-10.png)
+![image](https://github.com/user-attachments/assets/e4b9a16e-2328-4650-b292-eb88fb542237)
+
 
 !
 
@@ -476,7 +485,8 @@ Do Copy run start
 
 !
 
-![alt text](image-12.png)
+![image](https://github.com/user-attachments/assets/8a306e93-7cd0-45e9-b0d3-360039428e50)
+
 
 
 
@@ -489,7 +499,8 @@ Do Copy run start
 
 !
 
-![alt text](image-11.png)
+![image](https://github.com/user-attachments/assets/960e62cc-b096-41e2-a958-4b933566a511)
+
 
 **Какие промежуточные IP-адреса отображаются в результатах?**
 
