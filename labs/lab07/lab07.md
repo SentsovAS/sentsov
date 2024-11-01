@@ -2,7 +2,8 @@
 
 !
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/32a4ca94-320a-4ed2-837f-22a77e76e8cf)
+
 
 **Часть 1:	Создание сети и настройка основных параметров устройства**
 
@@ -201,11 +202,13 @@ Copy run start
 !
 
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/aa0ce351-4d61-4e74-b6ba-61085ae63e8c)
+
 
 !
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/beb8ac0d-0e76-4e9b-b562-45c30a620255)
+
 
 !
 
@@ -245,17 +248,20 @@ No shutdown
 
 do show spanning-tree
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/8a1173e1-0740-40f7-9837-353319fd0468)
+
 
 
 
 Коммутатор № 2
 
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/80bec64b-5079-412d-a3fe-e561a1fc4124)
+
 
 Коммутатор № 3
 
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/4aed4735-3b13-4601-8578-9871044725f6)
+
 
 !
 
@@ -305,7 +311,8 @@ spanning-tree vlan 1 cost 18
 
 do show spanning-tree
 
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/a0317845-395b-4219-8967-9a14eb0d85c7)
+
 
 **Почему протокол spanning-tree заменяет ранее заблокированный порт на назначенный порт и блокирует порт, который был назначенным портом на другом коммутаторе?**
 
@@ -341,15 +348,19 @@ no shutdown
 
 
 s1
-![alt text](image-9.png)
+
+![image](https://github.com/user-attachments/assets/bff5c238-1236-4330-89ae-9a35dbe57714)
+
 
 s2
 
-![alt text](image-10.png)
+![image](https://github.com/user-attachments/assets/f0e9a36f-20d9-4727-9c83-bf74c31edab5)
+
 
 s3
 
-![alt text](image-11.png)
+![image](https://github.com/user-attachments/assets/bce78db6-69c3-4e91-a517-cd0f485a7b2c)
+
 
 **Какой порт выбран протоколом STP в качестве порта корневого моста на каждом коммутаторе некорневого моста?**
 
