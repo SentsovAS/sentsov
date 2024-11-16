@@ -1,4 +1,5 @@
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/fb918f1f-0530-4dad-b561-86ab76c4033f)
+
 
 **Часть 1. Создание сети и настройка основных параметров устройства**
 
@@ -273,7 +274,8 @@ no shutdown
 
 do copy run start
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/2e412c87-3567-4f6c-a6a1-a1f4fe8d2134)
+
 
 !
 
@@ -287,7 +289,8 @@ do copy run start
 
 
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/32cdbb2a-8218-4e22-afa8-76083cd32e9e)
+
 
 **Часть 3. Настройка и проверка сервера DHCPv6 на R1**
 
@@ -297,7 +300,8 @@ do copy run start
 
 a.	Выполните команду ipconfig /all на PC-A и посмотрите на результат
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/249da6d9-bea0-49d5-a1a2-348e44dc64d4)
+
 
 b.	Обратите внимание, что основной DNS-суффикс отсутствует. Также обратите внимание, что предоставленные адреса DNS-сервера являются адресами «локального сайта anycast», а не одноадресные адреса, как ожидалось.
 
@@ -340,11 +344,13 @@ d.	Перезапустите PC-A.
 
 e.	Проверьте вывод ipconfig /all и обратите внимание на изменения.
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/44cac4ee-b39c-4272-bcf9-a869544c5edb)
+
 
 f.	Тестирование подключения с помощью пинга IP-адреса интерфейса G0/1 R2.
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/37306759-5f61-47f9-9ff3-80fd2261a1f6)
+
 
 **Часть 4. Настройка сервера DHCPv6 с сохранением состояния на R1**
 
@@ -379,7 +385,8 @@ do copy run start
 
 **Шаг 1. Включите PC-B и проверьте адрес SLAAC, который он генерирует**
 
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/fc11da59-c500-410a-8684-80f62c69f9bf)
+
 
 Обратите внимание на вывод, что используется префикс 2001:db8:acad:3::
 
