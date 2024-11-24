@@ -1,4 +1,5 @@
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/37ffd25d-1961-4b8e-b651-0c8535a3433d)
+
 
 !
 
@@ -244,7 +245,8 @@ no shutdown
 
 do copy run start
 
-![alt text](image-9.png)
+![image](https://github.com/user-attachments/assets/682367e2-fabc-44eb-991c-daf897b1ba6b)
+
 
 !
 
@@ -468,7 +470,8 @@ do copy run start
 
 do show interface trunk
 
-![alt text](image-10.png)
+![image](https://github.com/user-attachments/assets/11ef8dc7-2164-4ca2-b99e-82740373ffd1)
+
 
 **Какой IP-адрес был бы у ПК, если бы он был подключен к сети с помощью DHCP?**
 
@@ -558,13 +561,15 @@ c.	Выполните команду show ip dhcp server statistics для пр�
 
 show ip dhcp pool 
 
-![alt text](image-11.png)
+![image](https://github.com/user-attachments/assets/e16446f0-09be-4504-a025-f513623c143f)
+
 
 show ip dhcp binding 
 
 show ip dhcp server statistics 
 
-![alt text](image-12.png)
+![image](https://github.com/user-attachments/assets/41a51980-6fd6-4a86-a10b-0a3e9b93ba0a)
+
 
 dhcp binding ничего не обнаружила, а последняя команда не работает ((
 
