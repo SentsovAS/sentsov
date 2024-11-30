@@ -1,6 +1,7 @@
 **Лабораторная работа - Конфигурация безопасности коммутатора**
 
-![alt text](image-14.png)
+![image](https://github.com/user-attachments/assets/6af0b98f-5530-4668-8359-44bb7b63a74b)
+
 
 **Часть 1. Настройка основного сетевого устройства**
 
@@ -73,7 +74,8 @@ R1# show ip interface brief
 
 c.	Убедитесь, что IP-адресация и интерфейсы находятся в состоянии up / up (при необходимости устраните неполадки).
 
-![alt text](image-15.png)
+![image](https://github.com/user-attachments/assets/01709ab3-4c4a-4caf-8f5a-5927d745d808)
+
 
 
 **Шаг 3. Настройка и проверка основных параметров коммутатора**
@@ -288,11 +290,13 @@ a.	Настройте все магистральные порты Fa0/1 на о
 b.	Убедитесь, что режим транкинга успешно настроен на всех коммутаторах.
 S1# show interface trunk
 
-![alt text](image-16.png)
+![image](https://github.com/user-attachments/assets/c0fb82b8-2256-4a13-b178-d7047d7101f3)
+
 
 S2# show interface trunk
 
-![alt text](image-17.png)
+![image](https://github.com/user-attachments/assets/74f7c450-aaca-4416-91aa-aac6eac567c1)
+
 
 c.	Отключить согласование DTP F0/1 на S1 и S2. 
 
@@ -306,11 +310,13 @@ d.	Проверьте с помощью команды show interfaces.
 
 do show interfaces f0/1 switchport | include Negotiation
 
-![alt text](image-18.png)
+![image](https://github.com/user-attachments/assets/e2fcff3c-a097-46e7-aa03-d08ff9feba1b)
+
 
 do show interfaces f0/1 switchport | include Negotiation
 
-![alt text](image-19.png)
+![image](https://github.com/user-attachments/assets/7122e208-491d-4a56-a7ac-2c4d629a0bb9)
+
 
 
 **Шаг 2. Настройка портов доступа**
@@ -362,9 +368,11 @@ b.	Убедитесь, что неиспользуемые порты отклю
 
 show interfaces status
 
-![alt text](image-20.png)
+![image](https://github.com/user-attachments/assets/a370d1a8-16bb-4c48-82bd-3e1764e1c033)
 
-![alt text](image-21.png)
+
+![image](https://github.com/user-attachments/assets/1383bcef-de35-44c5-bba2-51d309e0a6f7)
+
 
 
 **Шаг 4. Документирование и реализация функций безопасности порта.**
@@ -373,7 +381,8 @@ show interfaces status
 
 a.	На S1, введите команду show port-security interface f0/6  для отображения настроек по умолчанию безопасности порта для интерфейса F0/6. Запишите свои ответы ниже.
 
-![alt text](image-22.png)
+![image](https://github.com/user-attachments/assets/dcf0e563-0f79-4fae-afd2-a5c450ccb1b6)
+
 
 !
 
@@ -431,7 +440,8 @@ f.	Проверка функции безопасности портов на S2
 
 show port-security interface f0/6
 
-![alt text](image-24.png)
+![image](https://github.com/user-attachments/assets/ff028a4a-6cb1-4075-aaf8-2adde6b8ff17)
+
 
 
 
@@ -460,7 +470,8 @@ switchport port-security aging time 60
 show port-security interface f0/18
 
 
-![alt text](image-23.png)
+![image](https://github.com/user-attachments/assets/31c511d0-300f-47ef-9e26-f5e0dacf477d)
+
 
 
 **Шаг 5. Реализовать безопасность DHCP snooping.**
@@ -493,7 +504,8 @@ d.	Проверка DHCP Snooping на S2.
 
 S2# show ip dhcp snooping
 
-![alt text](image-25.png)
+![image](https://github.com/user-attachments/assets/0df8824a-df31-4300-b8bf-ecb420e19bf8)
+
 
 e.	В командной строке на PC-B освободите, а затем обновите IP-адрес.
 
@@ -501,13 +513,15 @@ ipconfig /release
 
 ipconfig /renew
 
-![alt text](image-26.png)
+![image](https://github.com/user-attachments/assets/b27478a5-942a-4823-819e-d7a35c1e0db1)
+
 
 f.	Проверьте привязку отслеживания DHCP с помощью команды show ip dhcp snooping binding.
 
 show ip dhcp snooping binding 
 
-![alt text](image-27.png)
+![image](https://github.com/user-attachments/assets/cd6690d1-a6cf-47fe-a639-d9f107fb24d0)
+
 
 **Шаг 6. Реализация PortFast и BPDU Guard**
 
@@ -533,7 +547,8 @@ spanning-tree bpduguard enable
 
 show spanning-tree interface f0/6 detail
 
-![alt text](image-28.png)
+![image](https://github.com/user-attachments/assets/08850932-7311-4015-85ed-16e5d71e972b)
+
 
 
 
@@ -558,9 +573,11 @@ spanning-tree bpduguard enable
 
 Проверьте PING свзяь между всеми устройствами в таблице IP-адресации. В случае сбоя проверки связи может потребоваться отключить брандмауэр на хостах.
 
-![alt text](image-29.png)
+![image](https://github.com/user-attachments/assets/e9ad14ac-534f-4439-b9b7-e6bbda2e861f)
 
-![alt text](image-30.png)
+
+![image](https://github.com/user-attachments/assets/30974342-dc47-438b-8f32-12c13f27187c)
+
 
 
 **Вопросы для повторения**
