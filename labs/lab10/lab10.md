@@ -1,6 +1,7 @@
 **Лабораторная работа. Настройка протокола OSPFv2 для одной области**
 
-![alt text](image-31.png)
+![image](https://github.com/user-attachments/assets/d59e008c-cffa-445b-8551-b11c669cd4b7)
+
 
 **Часть 1. Создание сети и настройка основных параметров устройства**
 
@@ -291,10 +292,12 @@ ip ospf 56 area 0
 Вопрос: Какой маршрутизатор является DR? Какой маршрутизатор является BDR? 
 
 
-![alt text](image-34.png)
+![image](https://github.com/user-attachments/assets/26d2f56c-64b6-496a-8532-f543bb1e33c0)
 
 
-![alt text](image-33.png)
+
+![image](https://github.com/user-attachments/assets/2bdfd366-2ea9-4578-aa1b-c4699b3d315b)
+
 
 Роутер R1 является DR, а R2 BDR
 
@@ -307,7 +310,8 @@ g.	На R1 выполните команду show ip route ospf, чтобы уб
 
 h.	Запустите Ping до  адреса интерфейса R2 Loopback 1 из R1. Выполнение команды ping должно быть успешным.
 
-![alt text](image-32.png)
+![image](https://github.com/user-attachments/assets/fce5333b-c43e-49d6-b38c-f1f858b7c7ef)
+
 
 !
 
@@ -437,20 +441,24 @@ R2
 
 a.	Выполните команду show ip ospf interface g0/0/1 на R1 и убедитесь, что приоритет интерфейса установлен равным 50, а временные интервалы — Hello 30, Dead 120, а тип сети по умолчанию — Broadcast
 
-![alt text](image-37.png)
+![image](https://github.com/user-attachments/assets/9d4aa5d1-8ac3-456e-be16-ede16a4c4232)
+
 
 
 b.	На R1 выполните команду show ip route ospf, чтобы убедиться, что сеть R2 Loopback1 присутствует в таблице маршрутизации. Обратите внимание на разницу в метрике между этим выходным и предыдущим выходным. Также обратите внимание, что маска теперь составляет 24 бита, в отличие от 32 битов, ранее объявленных.
 
-![alt text](image-38.png)
+![image](https://github.com/user-attachments/assets/2de04e23-8e58-4c5b-8c41-4ad4e0ea90f5)
+
 
 c.	Введите команду show ip route ospf на маршрутизаторе R2. Единственная информация о маршруте OSPF должна быть распространяемый по умолчанию маршрут R1.
 
-![alt text](image-39.png)
+![image](https://github.com/user-attachments/assets/fe43d5b0-1e3e-4537-93fd-0e5dff1d3347)
+
 
 d.	Запустите Ping до адреса интерфейса R1 Loopback 1 из R2. Выполнение команды ping должно быть успешным.
 
-![alt text](image-40.png)
+![image](https://github.com/user-attachments/assets/7bd4d939-ea5f-4baa-bb81-56a57235135c)
+
 
 **Вопрос:**
 
