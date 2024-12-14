@@ -49,7 +49,8 @@ ctrl+o
 
 ctrl+x
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/a98115d2-5034-43a0-bf87-13de3dee9776)
+
 
 
 далее нужно поменять так же порт в файле конфигурации сайтов
@@ -284,5 +285,6 @@ server {
 }
 
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/715bdea7-d86a-412c-aa2b-60b0b4ceeb02)
+
 
