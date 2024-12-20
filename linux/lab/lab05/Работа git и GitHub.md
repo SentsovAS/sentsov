@@ -115,7 +115,8 @@ cat sentsov_key.pub
 
 # Копируем содержимое файла и вставляем на сайте github  в настройках профиля в разделе add ssh key
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/a9abc3fc-337d-4f23-853e-64c3bcc481d8)
+
 
 # В профиле создаем репозиторий Sentsov, после создания заходим в в <>code, выбираем ssh, копируем ссылку и клонируем ее в терминале убунту
 
