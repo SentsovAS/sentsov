@@ -107,7 +107,7 @@ cd .ssh
 
 ssh-keygen
 
-# Вводим имя ключа 'sentsov_key'  пароль для ключа и подтверждение (например такой же как на у пользователя)
+# Вводим имя ключа 'sentsov_key'  пароль для ключа и подтверждение (например такой же как на у пользователя, можно без пароля вообще)
 
 ll
 
@@ -118,20 +118,15 @@ cat sentsov_key.pub
 ![image](https://github.com/user-attachments/assets/a9abc3fc-337d-4f23-853e-64c3bcc481d8)
 
 
-# В профиле создаем репозиторий Sentsov, после создания заходим в в <>code, выбираем ssh, копируем ссылку и клонируем ее в терминале убунту
+# В профиле создаем репозиторий Sentsov, после создания заходим в в <>code, выбираем ssh(если не хватает прав то используем ссылку HTTPS), копируем ссылку и клонируем ее в терминале убунту
 
 # 4. Авторизоваться по ключу на guthub
 
-git clone git@github.com:SentsovAS/sentsov.git
+cd repo
 
-у меня выдает ошибку
+git clone https://github.com/SentsovAS/sentsov.git
 
-git@github.com: Permission denied (publickey).
+![image](https://github.com/user-attachments/assets/4b75d4db-46d6-4545-bb2a-532b280e3532)
 
-fatal: Could not read from remote repository.
 
-создал новый ключ ssh без рута, создал новый репозиторий linux_test, 
-
-подгрузил туда ключ
-
-ошибку пишет такую же ((
+репозиторий sentsov скопирован на линукс машину
