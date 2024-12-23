@@ -8,7 +8,8 @@ ifconfig -a
 
 ifconfig enp0s3 192.168.1.200/24
 
-![](image-3.png)
+![image](https://github.com/user-attachments/assets/0c11520e-8d86-45ef-9a7f-ed977df2e618)
+
 
 # Способ которому нас обучил учитель
 
@@ -20,11 +21,13 @@ cd /etc/netplan/
 
 ll
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/a22c53e5-846b-4312-a20d-790f1177edaf)
+
 
 nano 50-cloud-init.yaml
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/05b58239-ede6-4580-85e1-8dbd0ebefbb3)
+
 
 # Видим  что настройки сети получены по DHCP
 
@@ -32,7 +35,8 @@ nano 50-cloud-init.yaml
 
 ip -4 a
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/d9f97cba-916e-41d5-b347-9c7a3a2cadfc)
+
 
 192.168.1.103 c /24 маской (255.255.255.0)
 
@@ -50,7 +54,9 @@ ip -4 a
 
 # 4. Насписать файл конфигурации сети с настроенными ранее параметрами
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/311a7fbb-6d64-4d25-b1cb-59f2b0632da9)
 
-![alt text](image-5.png)
+
+![image](https://github.com/user-attachments/assets/94d78d97-a7a3-491a-b17d-b1e97b13969e)
+
 
