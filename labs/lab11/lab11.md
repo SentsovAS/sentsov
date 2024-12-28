@@ -1,8 +1,11 @@
-![alt text](image-41.png)
+![image](https://github.com/user-attachments/assets/af624cc4-aacb-47eb-9497-57336d91a889)
 
-![alt text](image-42.png)
 
-![alt text](image-43.png)
+![image](https://github.com/user-attachments/assets/9850e412-979e-414f-a84a-b1cc4b899834)
+
+
+![image](https://github.com/user-attachments/assets/d3928f4e-efc1-4b47-afb9-702b21ada432)
+
 
 # Часть 1. Создание сети и настройка основных параметров устройства
 
@@ -317,7 +320,8 @@ exit
 
 show vlan brief
 
-![alt text](image-47.png)
+![image](https://github.com/user-attachments/assets/f3d65f57-6c6f-4f7d-be49-7262f0d15092)
+
 
 !
 
@@ -341,7 +345,8 @@ Do copy run start
 
 show vlan brief
 
-![alt text](image-48.png)
+![image](https://github.com/user-attachments/assets/b9f7b2f6-fe00-4cfb-bcc1-639eb49072c2)
+
 
 
 # Часть 3. ·Настройте транки (магистральные каналы).
@@ -370,7 +375,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-49.png)
+![image](https://github.com/user-attachments/assets/fb69af0d-2136-4cab-8456-d7c009db2486)
+
 
 !
 
@@ -388,7 +394,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-50.png)
+![image](https://github.com/user-attachments/assets/b6657379-bee9-4045-a46f-efcc0c8b1e9d)
+
 
 # Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.
 
@@ -411,7 +418,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-51.png)
+![image](https://github.com/user-attachments/assets/a5a8f2a4-7ef7-4103-bb8f-45c7e21d7175)
+
 
 
 
@@ -487,7 +495,8 @@ Do Copy run start
 
 do show ip interface brief
 
-![alt text](image-52.png)
+![image](https://github.com/user-attachments/assets/50e1c74a-bd7f-4f36-8c93-87b4d40991db)
+
 
 
 # Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1
@@ -550,21 +559,27 @@ R1(config)# ip http authentication local
 
 Адреса ПК можно посмотреть в таблице адресации.
 
-![alt text](image-44.png)
+![image](https://github.com/user-attachments/assets/61535c61-8cce-4ad6-b5c1-80904f6f3c04)
 
-![alt text](image-45.png)
+
+![image](https://github.com/user-attachments/assets/de59af74-1f86-412a-9275-01e16631dc05)
+
 
 # Шаг 2. Выполните следующие тесты. Эхозапрос должен пройти успешно.
 
-![alt text](image-46.png)
+![image](https://github.com/user-attachments/assets/857945cf-0e3a-4d75-9fbe-48678d560111)
 
-![alt text](image-53.png)
 
-![alt text](image-54.png)
+![image](https://github.com/user-attachments/assets/051f02c4-752c-4211-b9ac-5edeef8dc286)
+
+
+![image](https://github.com/user-attachments/assets/e515cb1a-8ba9-4987-a79d-ffad799b2d86)
+
 
 по ssh на 10.20.0.1 и 172.16.1.1 заходит
 
-![alt text](image-55.png)
+![image](https://github.com/user-attachments/assets/d77c2e62-c61f-452c-8a23-ded40a610101)
+
 
 # Часть 7. Настройка и проверка списков контроля доступа (ACL)
 
