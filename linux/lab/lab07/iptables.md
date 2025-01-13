@@ -88,4 +88,9 @@ netfilter-persistent save
 
 netfilter-persistent start
 
+# iptables -nvL --line-numbers
+
+![image](https://github.com/user-attachments/assets/d7b075f9-bed1-4c96-803c-ed0261a46263)
+
+
 
