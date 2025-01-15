@@ -44,7 +44,8 @@ apt install tcpdump -y
 
 tcpdump -D
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/58e38766-b9b5-48e5-8b88-360f5307ebdf)
+
 
 
 
@@ -57,19 +58,22 @@ tcpdump 'tcp port 80' -nnvvAi enp0s3
 
 # Зайдем на хост в браузере (мо умолчанию 80 порт), получаем следующую запись в лог
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/ecba3b86-5917-4fc8-9e25-973b7244b9d9)
+
 
 # Снимем лог только первых трех пакетов
 
 tcpdump 'tcp port 80' -c 3 -i enp0s3
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/95dfd779-9957-480e-88e4-cf94851b070d)
+
 
 # Сделаем фильтр по опледеленному хосту (в моем случаи 192.168.106.68)
 
 tcpdump 'tcp port 80 and host 192.168.106.68' -i enp0s3
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/2cd3df55-8310-4a0b-8f7a-9e8aae4f98f4)
+
 
 # 2. сохранить дамп в файл
 
@@ -81,7 +85,8 @@ tcpdump 'tcp port 80 and host 192.168.106.68' -i enp0s3 -w sentsov2_dump.pcap
 
 cat sentsov_dump.pcap
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/3aa31e4d-1c25-46c2-a0a8-cf17dab2b3df)
+
 
 # с повышенной детализацией
 
@@ -106,7 +111,8 @@ cp sentsov_dump.pcap /home/sentsov/mount/
 
 # Устанавливаем Wireshark на виндовой машине, запускаем и открываем файл sentsov_dump.pcap, который был сохранен после сбора следующей команды "tcpdump 'icmp and host 192.168.106.68' -nnvvAi enp0s3"
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/5ed0b493-7fe8-474a-8177-47a7085a5388)
+
 
 1. в 0.000000 от хоста 192.168.106.68 хосту 192.168.106.71 по протоколу icmp был отправлен echo запрос
 2. в 0.000042 от хоста 192.168.106.71 хосту 192.168.106.68 по протоколу icmp был получен echo ответ
@@ -117,11 +123,13 @@ tcpdump 'tcp port 80 and host 192.168.106.68' -nnvvAi enp0s3 -w sentsov2_dump.pc
 
 cp sentsov2_dump.pcap /home/sentsov/mount/
 
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/04fea41b-3f99-40ca-83c3-85e2f3f33acb)
+
 
 применил в качестве фильтра избранное - (1 пакет)
 
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/0a43c5c3-1cdf-4e4e-8ca4-5a1f43b501f5)
+
 
 Это все пакеты для tcp-соединений
 
