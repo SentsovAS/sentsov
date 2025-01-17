@@ -89,11 +89,14 @@ ss -ntlp
 
 # Видим порты 9090 (веб интерфейс) и 9100 (веб интерфейс) отосящиеся к prometheus и Node Exporter
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/c5c9bf7b-fc0a-40c4-b952-537f0fbbd681)
 
-![alt text](image-1.png)
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/a830089a-ee4f-492e-b634-736dd05fa6e7)
+
+
+![image](https://github.com/user-attachments/assets/381ddda2-a8ac-439d-92e5-47bc363ce8c9)
+
 
 # 2. установить агент на web-сервер
 
@@ -130,7 +133,8 @@ systemctl status grafana-server
 
 # настройка закончена, идем на порт :3000  (порт по умолчанию) (лоин/пароль по умолчанию admin/admin)
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/bdb7f831-a286-4582-81d4-8b84ac25db51)
+
 
 # добавляем источник данных prometheus
 
@@ -140,7 +144,8 @@ systemctl status grafana-server
 
 нажимаем new = > import вбиваем в поле url or id 1860 (это айди нашего node exporter) = > load => выбираем data source prometheus => import
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/f7ec3677-3d72-4525-9fcb-9e5671f2588a)
+
 
 
 
