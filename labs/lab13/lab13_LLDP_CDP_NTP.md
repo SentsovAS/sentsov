@@ -1,4 +1,5 @@
-![alt text](image-68.png)
+![image](https://github.com/user-attachments/assets/fa0a3ad0-433e-41b5-8201-c62a1df1d442)
+
 
 # Часть 1. Создание сети и настройка основных параметров устройства
 
@@ -264,7 +265,8 @@ Duplex: full
 Вопрос:
 Какая версия IOS используется на  S1?
 
-![alt text](image-69.png)
+![image](https://github.com/user-attachments/assets/a20e0755-a99a-41d4-a52c-73c7119d53b3)
+
 
 На S1 используется IOS версии: 2
 
@@ -358,7 +360,8 @@ Total entries displayed: 1
 
 show clock
 
-![alt text](image-71.png)
+![image](https://github.com/user-attachments/assets/778962b6-768f-482e-9be4-9d8df3e0c161)
+
 
 # Шаг 2. Установите время.
 
