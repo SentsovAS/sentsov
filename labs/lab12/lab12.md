@@ -1,4 +1,5 @@
-![alt text](image-57.png)
+![image](https://github.com/user-attachments/assets/603d5571-efa4-4cf9-9e39-425bda8b0aec)
+
 
 # Часть 1. Создание сети и настройка основных параметров устройства
 
@@ -140,7 +141,8 @@ do copy run start
 
 do show ip route
 
-![alt text](image-58.png)
+![image](https://github.com/user-attachments/assets/21288aa5-ba9f-48a4-91bc-cc92af11a487)
+
 
 
 # Шаг 3. Настройте базовые параметры каждого коммутатора.
@@ -358,7 +360,8 @@ a.	С PC-B,  запустите эхо-запрос интерфейса Lo1 (20
 
 R1# show ip nat translations
 
-![alt text](image-59.png)
+![image](https://github.com/user-attachments/assets/1733b201-e709-469b-8e71-0ff0813064ef)
+
 
 # Во что был транслирован внутренний локальный адрес PC-B?
 
@@ -368,7 +371,8 @@ b.	С PC-A, запустите  эхо-запрос интерфейса Lo1 (20
 
 R1# show ip nat translations 
 
-![alt text](image-60.png)
+![image](https://github.com/user-attachments/assets/fd4fb0eb-4253-4a6a-8d52-7a247891042d)
+
 
 c.	Обратите внимание, что предыдущая трансляция для PC-B все еще находится в таблице. Из S1, эхо-запрос интерфейса Lo1 (209.165.200.1) на R2
 
@@ -376,7 +380,8 @@ d.	Теперь запускаем пинг R2 Lo1 из S2. На этот раз
 
 Sep 23 15:43:55.562: %IOSXE-6-PLATFORM: R0/0: cpp_cp: QFP:0.0 Thread:000 TS:00000001473688385900 %NAT-6-ADDR_ALLOC_FAILURE: Address allocation failed; pool 1 may be exhausted [2]
 
-![alt text](image-61.png)
+![image](https://github.com/user-attachments/assets/275ee16a-f007-4f80-b946-dedc17b3afcf)
+
 
 e.	Это ожидаемый результат, потому что выделено только 3 адреса, и мы попытались ping Lo1 с четырех устройств. Напомним, что NAT — это трансляция «один-в-один». Как много выделено трансляций? Введите команду show ip nat translations verbose , и вы увидите, что ответ будет 24 часа.
 
@@ -415,7 +420,8 @@ Pro Inside global Inside local Outside local Outside global
 226:1 192.168.1. 3:1 209.165.200. 1:1 209.165.200. 1:1
 Total number of translations: 1#
 
-![alt text](image-62.png)
+![image](https://github.com/user-attachments/assets/b36b3b61-b1b0-4a7e-a574-e2cdbde56307)
+
 
 Вопросы:
 Во что был транслирован внутренний локальный адрес PC-B?
@@ -485,13 +491,15 @@ Pro Inside global Inside local Outside local Outside global
 209.165.200. 230:1 192.168.1. 3:1 209.165.200. 1:1 209.165.200. 1:1 
 Total number of translations: 1 
 
-![alt text](image-63.png)
+![image](https://github.com/user-attachments/assets/c3a2502d-d8db-42b2-8d2c-56b4f4aefe62)
+
 
 b.	Сделайте трафик с нескольких устройств для наблюдения PAT. На PC-A и PC-B используйте параметр -t с командой ping для отправки безостановочного ping на интерфейс Lo1 R2 (ping -t 209.165.200.1). На S1 и S2 выполните привилегированную команду exec ping 209.165.200.1 повторить 2000. Затем вернитесь к R1 и выполните команду show ip nat translations.
 
 R1# show ip nat translations
 
-![alt text](image-64.png)
+![image](https://github.com/user-attachments/assets/fd61ee6c-1494-4704-a8b0-cda244a32551)
+
 
 Теперь все внутренние глобальные адреса сопоставляются с IP-адресом интерфейса g0/0/0.
 Остановите все пинги. На PC-A и PC-B, используя комбинацию клавиш CTRL-C.
@@ -523,11 +531,13 @@ Pro Inside global Inside local Outside local Outside global
 --- 209.165.200.229 192.168.1.2 --- ---
 Total number of translations: 1
 
-![](image-65.png)
+![image](https://github.com/user-attachments/assets/250b8fe2-b0db-47e6-8989-236ce8bcf42c)
+
 
 b.	Таблица перевода показывает, что статическое преобразование действует. Проверьте это, запустив ping  с R2 на 209.165.200.229. Плинги должны работать.
 
-![alt text](image-66.png)
+![image](https://github.com/user-attachments/assets/4759c7b7-450d-4fc3-a7d7-121fcf069562)
+
 
 c.	На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations, и вы увидите статическое сопоставление и преобразование на уровне порта для входящих pings.
 
