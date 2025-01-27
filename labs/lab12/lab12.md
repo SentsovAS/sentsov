@@ -247,6 +247,10 @@ switchport trunk native vlan 1000
 
 switchport trunk allowed vlan 1,1000
 
+exit
+
+ip default-gateway 192.168.1.1
+
 do Copy run start
 
 # настройка коммутатора S2
@@ -328,6 +332,10 @@ switchport mode trunk
 switchport trunk native vlan 1000
 
 switchport trunk allowed vlan 1,1000
+
+exit
+
+ip default-gateway 192.168.1.1
 
 do Copy run start
 
