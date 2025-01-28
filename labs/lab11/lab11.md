@@ -1,8 +1,11 @@
-![alt text](image-41.png)
+![image](https://github.com/user-attachments/assets/850616a4-e0bb-4f60-b10a-43406881c8b9)
 
-![alt text](image-42.png)
 
-![alt text](image-43.png)
+![image](https://github.com/user-attachments/assets/a7f1d00d-9571-48f2-8221-ef040e285546)
+
+
+![image](https://github.com/user-attachments/assets/253bfb0b-deb3-4f9d-9d96-b4e4f082af4f)
+
 
 # Часть 1. Создание сети и настройка основных параметров устройства
 
@@ -317,7 +320,8 @@ exit
 
 show vlan brief
 
-![alt text](image-47.png)
+![image](https://github.com/user-attachments/assets/fe3dc225-9985-431b-b409-556e00c90fed)
+
 
 !
 
@@ -341,7 +345,8 @@ Do copy run start
 
 show vlan brief
 
-![alt text](image-48.png)
+![image](https://github.com/user-attachments/assets/b9cab58c-25ad-4cd5-a747-c96ab42a4e39)
+
 
 
 # Часть 3. ·Настройте транки (магистральные каналы).
@@ -370,7 +375,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-49.png)
+![image](https://github.com/user-attachments/assets/8bc0491f-e5bf-40bd-9530-958fad9c5a85)
+
 
 !
 
@@ -388,7 +394,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-50.png)
+![image](https://github.com/user-attachments/assets/9b5e927c-aff4-4e3d-83dc-8e6f0b7ee110)
+
 
 # Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.
 
@@ -411,7 +418,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-51.png)
+![image](https://github.com/user-attachments/assets/fe804815-f81b-4b8e-98d0-529ce3eda253)
+
 
 
 
@@ -487,7 +495,8 @@ Do Copy run start
 
 do show ip interface brief
 
-![alt text](image-52.png)
+![image](https://github.com/user-attachments/assets/69dec740-729e-41b0-b6d6-089e27ef77ab)
+
 
 
 # Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1
@@ -550,21 +559,27 @@ R1(config)# ip http authentication local
 
 Адреса ПК можно посмотреть в таблице адресации.
 
-![alt text](image-44.png)
+![image](https://github.com/user-attachments/assets/c5463fe9-cbdf-4776-b24b-5cf26cf0b8a5)
 
-![alt text](image-45.png)
+
+![image](https://github.com/user-attachments/assets/0e921ccc-c451-4a71-ba81-d0aa51373a15)
+
 
 # Шаг 2. Выполните следующие тесты. Эхозапрос должен пройти успешно.
 
-![alt text](image-46.png)
+![image](https://github.com/user-attachments/assets/c507ae7f-1a4f-45df-9454-3684cc3f90f2)
 
-![alt text](image-53.png)
 
-![alt text](image-54.png)
+![image](https://github.com/user-attachments/assets/2b2589a1-a8e3-4f27-864a-9f5776cd2eb3)
+
+
+![image](https://github.com/user-attachments/assets/74476d9c-0678-463f-b269-cde198124158)
+
 
 по ssh на 10.20.0.1 и 172.16.1.1 заходит
 
-![alt text](image-55.png)
+![image](https://github.com/user-attachments/assets/f1c4ab18-9c6f-419f-824a-03e4a41844a3)
+
 
 # Часть 7. Настройка и проверка списков контроля доступа (ACL)
 
@@ -600,22 +615,6 @@ permit tcp any host 172.16.1.1 eq 22
 int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
 
 ip access-group DENY_SSH_VLAN20 in
-
-
-=======================
-
-ip access-list ext DENY_ANY
-
-int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
-
-ip access-group DENY_ANY in
-
-=============================
-deny icmp 10.30.0.0 0.0.0.255 10.40.0.0 0.0.0.255 echo
-
-permit icmp any host 172.16.1.1 echo
-
-permit tcp any host 172.16.1.1 eq 22
 
 # Политика 2. Сеть Sales не имеет доступа к IP-адресам в сети Management с помощью любого веб-протокола (HTTP/HTTPS). 
 
@@ -714,21 +713,26 @@ ip access-group VLAN30_DENY_ECHO_VLAN40 in
 
 # Шаг 3. Убедитесь, что политики безопасности применяются развернутыми списками доступа.
 
-![alt text](image-56.png)
+![image](https://github.com/user-attachments/assets/ab4d529b-64f1-48fe-ad25-a44b5d45c28a)
+
 
 PC-A
 
-![alt text](image-75.png)
+![image](https://github.com/user-attachments/assets/afd66481-cfea-4070-85af-71399e007d4e)
+
 
 PC-B
 
-![alt text](image-72.png)
+![image](https://github.com/user-attachments/assets/39b64d90-c8e6-40cf-bd97-b1a2870f4d7a)
+
 
 SSH 10.20.0.4
 
-![alt text](image-73.png)
+![image](https://github.com/user-attachments/assets/464dcd95-a675-4655-9035-8b1ccb2bb6a4)
+
 
 SSH 172.16.1.1
 
-![alt text](image-74.png)
+![image](https://github.com/user-attachments/assets/ae50aec3-359e-4567-aca9-a501e8847adf)
+
 
