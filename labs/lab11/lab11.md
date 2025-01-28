@@ -1,11 +1,8 @@
-![image](https://github.com/user-attachments/assets/af624cc4-aacb-47eb-9497-57336d91a889)
+![alt text](image-41.png)
 
+![alt text](image-42.png)
 
-![image](https://github.com/user-attachments/assets/9850e412-979e-414f-a84a-b1cc4b899834)
-
-
-![image](https://github.com/user-attachments/assets/d3928f4e-efc1-4b47-afb9-702b21ada432)
-
+![alt text](image-43.png)
 
 # Часть 1. Создание сети и настройка основных параметров устройства
 
@@ -320,8 +317,7 @@ exit
 
 show vlan brief
 
-![image](https://github.com/user-attachments/assets/f3d65f57-6c6f-4f7d-be49-7262f0d15092)
-
+![alt text](image-47.png)
 
 !
 
@@ -345,8 +341,7 @@ Do copy run start
 
 show vlan brief
 
-![image](https://github.com/user-attachments/assets/b9f7b2f6-fe00-4cfb-bcc1-639eb49072c2)
-
+![alt text](image-48.png)
 
 
 # Часть 3. ·Настройте транки (магистральные каналы).
@@ -375,8 +370,7 @@ do copy run start
 
 do show interfaces trunk
 
-![image](https://github.com/user-attachments/assets/fb69af0d-2136-4cab-8456-d7c009db2486)
-
+![alt text](image-49.png)
 
 !
 
@@ -394,8 +388,7 @@ do copy run start
 
 do show interfaces trunk
 
-![image](https://github.com/user-attachments/assets/b6657379-bee9-4045-a46f-efcc0c8b1e9d)
-
+![alt text](image-50.png)
 
 # Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.
 
@@ -418,8 +411,7 @@ do copy run start
 
 do show interfaces trunk
 
-![image](https://github.com/user-attachments/assets/a5a8f2a4-7ef7-4103-bb8f-45c7e21d7175)
-
+![alt text](image-51.png)
 
 
 
@@ -495,8 +487,7 @@ Do Copy run start
 
 do show ip interface brief
 
-![image](https://github.com/user-attachments/assets/50e1c74a-bd7f-4f36-8c93-87b4d40991db)
-
+![alt text](image-52.png)
 
 
 # Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1
@@ -559,39 +550,25 @@ R1(config)# ip http authentication local
 
 Адреса ПК можно посмотреть в таблице адресации.
 
-![image](https://github.com/user-attachments/assets/61535c61-8cce-4ad6-b5c1-80904f6f3c04)
+![alt text](image-44.png)
 
-
-![image](https://github.com/user-attachments/assets/de59af74-1f86-412a-9275-01e16631dc05)
-
+![alt text](image-45.png)
 
 # Шаг 2. Выполните следующие тесты. Эхозапрос должен пройти успешно.
 
-![image](https://github.com/user-attachments/assets/857945cf-0e3a-4d75-9fbe-48678d560111)
+![alt text](image-46.png)
 
+![alt text](image-53.png)
 
-![image](https://github.com/user-attachments/assets/051f02c4-752c-4211-b9ac-5edeef8dc286)
-
-
-![image](https://github.com/user-attachments/assets/e515cb1a-8ba9-4987-a79d-ffad799b2d86)
-
+![alt text](image-54.png)
 
 по ssh на 10.20.0.1 и 172.16.1.1 заходит
 
-![image](https://github.com/user-attachments/assets/d77c2e62-c61f-452c-8a23-ded40a610101)
-
+![alt text](image-55.png)
 
 # Часть 7. Настройка и проверка списков контроля доступа (ACL)
 
 При проверке базового подключения компания требует реализации следующих политик безопасности:
-
-Политика1. Сеть Sales не может использовать SSH в сети Management (но в  другие сети SSH разрешен). 
-
-Политика 2. Сеть Sales не имеет доступа к IP-адресам в сети Management с помощью любого веб-протокола (HTTP/HTTPS). Сеть Sales также не имеет доступа к интерфейсам R1 с помощью любого веб-протокола. Разрешён весь другой веб-трафик (обратите внимание — Сеть Sales  может получить доступ к интерфейсу Loopback 1 на R1).
-
-Политика3. Сеть Sales не может отправлять эхо-запросы ICMP в сети Operations или Management. Разрешены эхо-запросы ICMP к другим адресатам. 
-
-Политика 4: Cеть Operations  не может отправлять ICMP эхозапросы в сеть Sales. Разрешены эхо-запросы ICMP к другим адресатам. 
 
 # remark - описание, deny - запретить, permit - разрешить, eq - равный
 
@@ -606,84 +583,74 @@ R1(config)# ip http authentication local
 # show access-lists показывает информацию о акцес листах с указанием номера строки 
 # show running-config показывает акцес листы с описанием-remark, но без номеров строк
 
-1. правило
-conf t
+# 1. Политика1. Сеть Sales не может использовать SSH в сети Management (но в  другие сети SSH разрешен). 
 
-access-list 1 remark for vlan 40 Deny SSH on vlan 20
-
-access-list 1 deny 
-
-или правильнее
-
-ip access-list standart SSH-Deny
-
-remark for vlan 40 Deny SSH on vlan 20
-
-deny host 10.20.0.0 0.0.0.255
-
-permit any
-
-exit
-
-Роутер R2
+R1
 
 conf t
 
-line vty 0 4
+ip access-list ext DENY_SSH_VLAN20
 
-ip access-list group SSH-Deny in
+remark DENY SSH VLAN20
 
-или ip access-group SSH-Deny in
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 22
 
-или
+permit tcp any host 172.16.1.1 eq 22
 
-access-class 1 in
+int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
+
+ip access-group DENY_SSH_VLAN20 in
 
 
+=======================
 
+ip access-list ext DENY_ANY
+
+int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
+
+ip access-group DENY_ANY in
+
+=============================
+deny icmp 10.30.0.0 0.0.0.255 10.40.0.0 0.0.0.255 echo
+
+permit icmp any host 172.16.1.1 echo
+
+permit tcp any host 172.16.1.1 eq 22
 
 # Политика 2. Сеть Sales не имеет доступа к IP-адресам в сети Management с помощью любого веб-протокола (HTTP/HTTPS). 
 
-роутер 1
+R1
 
-2. правило
+ip access-list extended DENY_HTTP_VLAN20
 
-ip access-list extended HTTP-Deny
-
-remark for vlan 40 Deny HTTP on vlan 20
+remark For Vlan 40 Deny HTTP on Vlan 20
 
 deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 80
 
-permit tcp 10.40.0.0 0.0.0.255 any
-
 exit
 
-!
+ip access-list extended DENY_HTTPS_VLAN20
 
-ip access-list extended HTTPS-Deny
-
-remark for vlan 40 Deny HTTPS on vlan 20
+remark For Vlan 40 Deny HTTPS on Vlan 20
 
 deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 443
 
-permit tcp 10.40.0.0 0.0.0.255 any
-
 exit
 
-int range g0/0/1.20,g0/0/1.30,lo1
+int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
 
-ip access-group HTTP-Deny in
+ip access-group DENY_HTTP_VLAN20 in
 
-ip access-group HTTPS-Deny in
+ip access-group DENY_HTTPS_VLAN20 in
 
 
 # Сеть Sales также не имеет доступа к интерфейсам R1 с помощью любого веб-протокола. Разрешён весь другой веб-трафик (обратите внимание — Сеть Sales  может получить доступ к интерфейсу Loopback 1 на R1).
 
 !
 
-ip access-list extended Sales-Deny-Any
+ip access-list extended VLAN40_DENY_WEB
 
-remark for vlan 40 Deny Any Web
+remark For Vlan 40 Deny Any Web
 
 deny tcp 10.40.0.0 0.0.0.255 host 10.20.0.1 eq 80
 
@@ -693,48 +660,75 @@ deny tcp 10.40.0.0 0.0.0.255 host 10.30.0.1 eq 80
 
 deny tcp 10.40.0.0 0.0.0.255 host 10.30.0.1 eq 443
 
-deny tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
 
-deny tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
-
-permit tcp 10.40.0.0 0.0.0.255 any
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
 
 exit
 
-int range g0/0/1.20,g0/0/1.30,lo1
+int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
 
-ip access-group Sales-Deny-Any in
-
-
-# Политика3. Сеть Sales не может отправлять эхо-запросы ICMP в сети Operations или Management. Разрешены эхо-запросы ICMP к другим адресатам.
+ip access-group VLAN40_DENY_WEB in
 
 
-ip access-list extended Sales-Deny-Echo
+# Политика 3. Сеть Sales не может отправлять эхо-запросы ICMP в сети Operations или Management. Разрешены эхо-запросы ICMP к другим адресатам.
+
+
+ip access-list extended VLAN40_DENY_ECHO_VLAN20_30
 
 remark for vlan 40 Deny Echo on vlan 20 and vlan 30
 
-deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo (icmp)
+deny icmp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo 
 
-deny tcp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
+deny icmp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
 
-permit 10.40.0.0 0.0.0.255 any echo
+permit icmp any host 172.16.1.1 echo
 
-int range g0/0/1.20,g0/0/1.30
+exit
 
-ip access-group Sales-Deny-Echo in
+int g0/0/1.40
+
+ip access-group VLAN40_DENY_ECHO_VLAN20_30 in
 
 # Политика 4: Cеть Operations  не может отправлять ICMP эхозапросы в сеть Sales. Разрешены эхо-запросы ICMP к другим адресатам.
 
-ip access-list extended Operations-Deny-Echo
+ip access-list extended VLAN30_DENY_ECHO_VLAN40
 
-remark for vlan 30 Deny-Echo on vlan 40
+remark for Vlan 30 Deny-Echo on Vlan 40
 
-deny tcp 10.30.0.0 0.0.0.255 10.40.0.0 0.0.0.255 echo
+deny icmp 10.30.0.0 0.0.0.255 10.40.0.0 0.0.0.255 echo
 
-permit tcp 10.30.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo
+permit icmp 10.30.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo
 
-dpermit tcp 10.30.0.0 0.0.0.255 host 172.16.1.1 echo
+permit icmp any host 172.16.1.1 echo
 
-int range g0/0/1.40,g0/0/1.20,lo1
+permit tcp any host 172.16.1.1 eq 22
 
-ip access-group Operations-Deny-Echo in
+int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
+
+ip access-group VLAN30_DENY_ECHO_VLAN40 in
+
+# Шаг 1. Проанализируйте требования к сети и политике безопасности для планирования реализации ACL.
+
+# Шаг 2. Разработка и применение расширенных списков доступа, которые будут соответствовать требованиям политики безопасности.
+
+# Шаг 3. Убедитесь, что политики безопасности применяются развернутыми списками доступа.
+
+![alt text](image-56.png)
+
+PC-A
+
+![alt text](image-75.png)
+
+PC-B
+
+![alt text](image-72.png)
+
+SSH 10.20.0.4
+
+![alt text](image-73.png)
+
+SSH 172.16.1.1
+
+![alt text](image-74.png)
+
