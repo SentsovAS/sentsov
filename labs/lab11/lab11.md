@@ -600,94 +600,70 @@ R1(config)# ip http authentication local
 
 # 1. Политика1. Сеть Sales не может использовать SSH в сети Management (но в  другие сети SSH разрешен). 
 
-R1
-
-conf t
-
-ip access-list ext DENY_SSH_VLAN20
-
-remark DENY SSH VLAN20
-
-deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 22
-
-permit tcp any host 172.16.1.1 eq 22
-
-int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
-
-ip access-group DENY_SSH_VLAN20 in
-
 # Политика 2. Сеть Sales не имеет доступа к IP-адресам в сети Management с помощью любого веб-протокола (HTTP/HTTPS). 
-
-R1
-
-ip access-list extended DENY_HTTP_VLAN20
-
-remark For Vlan 40 Deny HTTP on Vlan 20
-
-deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 80
-
-exit
-
-ip access-list extended DENY_HTTPS_VLAN20
-
-remark For Vlan 40 Deny HTTPS on Vlan 20
-
-deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 443
-
-exit
-
-int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
-
-ip access-group DENY_HTTP_VLAN20 in
-
-ip access-group DENY_HTTPS_VLAN20 in
-
-
 # Сеть Sales также не имеет доступа к интерфейсам R1 с помощью любого веб-протокола. Разрешён весь другой веб-трафик (обратите внимание — Сеть Sales  может получить доступ к интерфейсу Loopback 1 на R1).
-
-!
-
-ip access-list extended VLAN40_DENY_WEB
-
-remark For Vlan 40 Deny Any Web
-
-deny tcp 10.40.0.0 0.0.0.255 host 10.20.0.1 eq 80
-
-deny tcp 10.40.0.0 0.0.0.255 host 10.20.0.1 eq 443
-
-deny tcp 10.40.0.0 0.0.0.255 host 10.30.0.1 eq 80
-
-deny tcp 10.40.0.0 0.0.0.255 host 10.30.0.1 eq 443
-
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
-
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
-
-exit
-
-int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
-
-ip access-group VLAN40_DENY_WEB in
-
 
 # Политика 3. Сеть Sales не может отправлять эхо-запросы ICMP в сети Operations или Management. Разрешены эхо-запросы ICMP к другим адресатам.
 
+# R1
 
-ip access-list extended VLAN40_DENY_ECHO_VLAN20_30
+ip access-list ext DENY_SSH_HTTP_HTTPS_ECHO
 
-remark for vlan 40 Deny Echo on vlan 20 and vlan 30
+remark DENY SSH HTTP HTTPS ECHO
+
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 22
+
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 80
+
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 443
+
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
+
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 22
+
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
 
 deny icmp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo 
 
 deny icmp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
 
-permit icmp any host 172.16.1.1 echo
+permit icmp 10.40.0.0 0.0.0.255 host 172.16.1.1 echo
 
 exit
 
 int g0/0/1.40
 
-ip access-group VLAN40_DENY_ECHO_VLAN20_30 in
+ip access-group DENY_SSH_HTTP_HTTPS_ECHO in
+
+# R2
+
+ip access-list ext DENY_SSH_HTTP_HTTPS_ECHO
+
+remark DENY SSH HTTP HTTPS ECHO
+
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 22
+
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 80
+
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 443
+
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
+
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 22
+
+permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
+
+deny icmp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo 
+
+deny icmp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
+
+permit icmp 10.40.0.0 0.0.0.255 host 172.16.1.1 echo
+
+exit
+
+int g0/0/1
+
+ip access-group DENY_SSH_HTTP_HTTPS_ECHO in
 
 # Политика 4: Cеть Operations  не может отправлять ICMP эхозапросы в сеть Sales. Разрешены эхо-запросы ICMP к другим адресатам.
 
@@ -697,13 +673,13 @@ remark for Vlan 30 Deny-Echo on Vlan 40
 
 deny icmp 10.30.0.0 0.0.0.255 10.40.0.0 0.0.0.255 echo
 
-permit icmp 10.30.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo
-
-permit icmp any host 172.16.1.1 echo
+permit icmp 10.30.0.0 0.0.0.255 any echo
 
 permit tcp any host 172.16.1.1 eq 22
 
-int range g0/0/1.20,g0/0/1.30,g0/0/1.40,lo1
+exit 
+
+int range g0/0/1.30
 
 ip access-group VLAN30_DENY_ECHO_VLAN40 in
 
