@@ -1,8 +1,11 @@
-![alt text](image-41.png)
+![image](https://github.com/user-attachments/assets/8a286c7f-9355-454f-a5aa-449f8f450f3b)
 
-![alt text](image-42.png)
 
-![alt text](image-43.png)
+![image](https://github.com/user-attachments/assets/1561ca12-a7bf-4fc8-8aa4-ef9c73314541)
+
+
+![image](https://github.com/user-attachments/assets/49b47aad-af15-473b-a21f-175045136533)
+
 
 # Часть 1. Создание сети и настройка основных параметров устройства
 
@@ -317,7 +320,8 @@ exit
 
 show vlan brief
 
-![alt text](image-47.png)
+![image](https://github.com/user-attachments/assets/88972d95-4f76-41a4-b0bc-5cb7df4797d9)
+
 
 !
 
@@ -341,7 +345,8 @@ Do copy run start
 
 show vlan brief
 
-![alt text](image-48.png)
+![image](https://github.com/user-attachments/assets/67ccfcb6-ca77-444e-b943-6d73def34ab7)
+
 
 
 # Часть 3. ·Настройте транки (магистральные каналы).
@@ -370,7 +375,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-49.png)
+![image](https://github.com/user-attachments/assets/76ca0196-5386-45c7-ada5-07e3a5a7d90b)
+
 
 !
 
@@ -388,7 +394,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-50.png)
+![image](https://github.com/user-attachments/assets/248e400e-7be6-4965-a282-08be966c44df)
+
 
 # Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.
 
@@ -411,7 +418,8 @@ do copy run start
 
 do show interfaces trunk
 
-![alt text](image-51.png)
+![image](https://github.com/user-attachments/assets/12ad7163-d35a-4791-ac85-0f21938ab5fa)
+
 
 
 
@@ -487,7 +495,8 @@ Do Copy run start
 
 do show ip interface brief
 
-![alt text](image-52.png)
+![image](https://github.com/user-attachments/assets/07bbff5f-e81f-4d41-ac96-247b7459e36c)
+
 
 
 # Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1
@@ -550,21 +559,31 @@ R1(config)# ip http authentication local
 
 Адреса ПК можно посмотреть в таблице адресации.
 
-![alt text](image-44.png)
+![image](https://github.com/user-attachments/assets/2202be55-060a-4f1e-b1a0-9c9a79e390ba)
 
-![alt text](image-45.png)
+
+
+![image](https://github.com/user-attachments/assets/b8779bb1-af84-44e4-916b-f64c132e677e)
+
+
 
 # Шаг 2. Выполните следующие тесты. Эхозапрос должен пройти успешно.
 
-![alt text](image-46.png)
+![image](https://github.com/user-attachments/assets/67c071f8-82ad-46f0-be25-84a41f9bd28e)
 
-![alt text](image-53.png)
 
-![alt text](image-54.png)
+
+![image](https://github.com/user-attachments/assets/95ba3364-0217-4123-bb55-9a276c60236a)
+
+
+
+![image](https://github.com/user-attachments/assets/5dd19a3d-4a56-410b-a862-19a0a41cd935)
+
 
 по ssh на 10.20.0.1 и 172.16.1.1 заходит
 
-![alt text](image-55.png)
+![image](https://github.com/user-attachments/assets/9f2baf81-6a41-4ebf-837a-0fe09f54c069)
+
 
 # Часть 7. Настройка и проверка списков контроля доступа (ACL)
 
@@ -660,21 +679,26 @@ ip access-group VLAN30_DENY_ECHO_VLAN40 in
 
 # Шаг 3. Убедитесь, что политики безопасности применяются развернутыми списками доступа.
 
-![alt text](image-56.png)
+![image](https://github.com/user-attachments/assets/a4d73451-0fa5-44b6-98cf-92dc11178fe8)
+
 
 PC-A
 
-![alt text](image-75.png)
+![image](https://github.com/user-attachments/assets/58c7c0ae-d39e-4440-8829-07a8770369dd)
+
 
 PC-B
 
-![alt text](image-72.png)
+![image](https://github.com/user-attachments/assets/a69473ee-09de-4085-b86c-fbd8eda476e0)
+
 
 SSH 10.20.0.4
 
-![alt text](image-73.png)
+![image](https://github.com/user-attachments/assets/45147c50-ffa0-4adc-882e-3dd33e50edf1)
+
 
 SSH 172.16.1.1
 
-![alt text](image-74.png)
+![image](https://github.com/user-attachments/assets/a5e1bd8a-2b96-48b9-a072-706de05f3657)
+
 
