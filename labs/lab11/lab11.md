@@ -617,17 +617,17 @@ deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 80
 
 deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 443
 
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
+permit tcp 10.40.0.0 0.0.0.255 any eq 80
 
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 22
+permit tcp 10.40.0.0 0.0.0.255 any eq 22
 
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
+permit tcp 10.40.0.0 0.0.0.255 any eq 443
 
 deny icmp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo 
 
 deny icmp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
 
-permit icmp 10.40.0.0 0.0.0.255 host 172.16.1.1 echo
+permit icmp 10.40.0.0 0.0.0.255 any echo
 
 exit
 
@@ -647,17 +647,17 @@ deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 80
 
 deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 443
 
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 80
+permit tcp 10.40.0.0 0.0.0.255 any eq 80
 
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 22
+permit tcp 10.40.0.0 0.0.0.255 any eq 22
 
-permit tcp 10.40.0.0 0.0.0.255 host 172.16.1.1 eq 443
+permit tcp 10.40.0.0 0.0.0.255 any eq 443
 
 deny icmp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo 
 
 deny icmp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
 
-permit icmp 10.40.0.0 0.0.0.255 host 172.16.1.1 echo
+permit icmp 10.40.0.0 0.0.0.255 any echo
 
 exit
 
@@ -675,7 +675,7 @@ deny icmp 10.30.0.0 0.0.0.255 10.40.0.0 0.0.0.255 echo
 
 permit icmp 10.30.0.0 0.0.0.255 any echo
 
-permit tcp any host 172.16.1.1 eq 22
+permit tcp 10.30.0.0 0.0.0.255 any eq 22
 
 exit 
 
