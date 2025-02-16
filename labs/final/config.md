@@ -70,6 +70,10 @@ Enc dot1Q 3
 
 Ip add 192.168.3.1 255.255.255.0
 
+ipv6 address FE80::1 link-local
+
+ipv6 address 2001:DB8:ACAD:3::1/64
+
 No shutdown
 
 Exit
@@ -388,9 +392,22 @@ exit
 
 ipv6 dhcp pool R1_LAN
 
-dns-server 2001:db8:acad::2
+address prefix 2001:db8:acad::/64
+
+dns-server 2001:DB8:ACAD:4::1
 
 domain-name LAN.com
+
+interface g0/1.11
+
+ipv6 address 2001:DB8:ACAD:4::1/64
+
+ipv6 address FE80::1 link-local
+
+ipv6 nd other-config-flag 
+
+ipv6 dhcp server R1_LAN
+
 
 # Настроим DHCP на коммутаторе s1
 
@@ -515,7 +532,15 @@ No shutdown
 
 ipv6 dhcp pool R2_TV
 
-dns-server 2001:db8:acad::1
+address prefix 2001:db8:acad::/64
+
+dns-server 2001:DB8:ACAD:2::1
+
+interface g0/0/1.2
+
+ipv6 nd other-config-flag 
+
+ipv6 dhcp server R2_TV
 
 domain-name TV.com
 
@@ -533,17 +558,11 @@ default-router 192.168.2.1
 
 dns-server 192.168.2.1
 
-domain-name PROJECT.com
+domain-name TV.com
 
 lease 2 0 0
 
 exit
-
-ipv6 dhcp pool R1_TV
-
-dns-server 2001:db8:acad::1
-
-domain-name TV.com
 
 # Настройка статического маршрута R2
 
@@ -670,3 +689,110 @@ domain-name PROJECT.com
 lease 2 0 0
 
 exit
+
+# Настройка маршрутизации OSPPF на роутерах интернет провайдера R3, R4, R5, R5
+
+# R3
+
+router ospf 1
+
+network 10.53.1.0 0.0.0.255 area 0
+
+network 10.53.2.0 0.0.0.255 area 0
+
+network 10.53.0.0 0.0.0.255 area 0
+
+interface GigabitEthernet0/0
+
+ip address 10.53.0.1 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/1
+
+ip address 10.53.1.1 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/2
+
+ip address 10.53.2.1 255.255.255.0
+
+no shutdown
+
+# R4
+
+router ospf 1
+
+network 10.53.2.0 0.0.0.255 area 0
+
+network 10.53.3.0 0.0.0.255 area 0
+
+network 10.53.5.0 0.0.0.255 area 0
+
+interface GigabitEthernet0/0
+
+ip address 10.53.5.1 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/1
+
+ip address 10.53.3.1 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/2
+
+ip address 10.53.2.2 255.255.255.0
+
+no shutdown
+
+# R5
+
+router ospf 1
+
+network 10.53.3.0 0.0.0.255 area 0
+
+network 10.53.4.0 0.0.0.255 area 0
+
+interface GigabitEthernet0/1
+
+ip address 10.53.4.2 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/2
+
+ip address 10.53.3.2 255.255.255.0
+
+no shutdown
+
+# R6
+
+router ospf 1
+
+network 10.53.1.0 0.0.0.255 area 0
+
+network 10.53.4.0 0.0.0.255 area 0
+
+network 10.53.5.0 0.0.0.255 area 0
+
+interface GigabitEthernet0/0
+
+ip address 10.53.5.2 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/1
+
+ip address 10.53.1.2 255.255.255.0
+
+no shutdown
+
+interface GigabitEthernet0/2
+
+ip address 10.53.4.1 255.255.255.0
+
+no shutdown
+
