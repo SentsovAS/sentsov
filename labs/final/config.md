@@ -112,7 +112,13 @@ show ip nat translations
 
 # Настройка статического маршрута R1
 
-ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/0
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/0 
+
+ip route 10.53.1.0 255.255.255.0 GigabitEthernet0/2 
+
+ip route 10.53.5.0 255.255.255.0 GigabitEthernet0/2 
+
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/2
 
 # Настройка тунеля до роутера провайдера
 
@@ -500,13 +506,17 @@ exit
 
 ipv6 unicast-routing
 
-int g0/0/0
+int g0/1
+
+no shutdown
+
+int g0/0
 
 ip address 192.168.0.2 255.255.255.0
 
 no shutdown
 
-int g0/0/1.2
+int g0/1.2
 
 ipv6 add 2001:db8:acad:2::1/64
 
@@ -522,7 +532,7 @@ no shutdown
 
 exit
 
-Interface g0/0/1.1000
+Interface g0/1.1000
 
 Description for vlan native
 
@@ -536,7 +546,7 @@ address prefix 2001:db8:acad::/64
 
 dns-server 2001:DB8:ACAD:2::1
 
-interface g0/0/1.2
+interface g0/1.2
 
 ipv6 nd other-config-flag 
 
@@ -566,9 +576,35 @@ exit
 
 # Настройка статического маршрута R2
 
-ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/0/0
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/0 
 
-ip route 192.168.3.0 255.255.255.0 GigabitEthernet0/0/0
+ip route 192.168.3.0 255.255.255.0 GigabitEthernet0/0 
+
+ip route 10.53.1.0 255.255.255.0 GigabitEthernet0/2 
+
+ip route 10.53.0.0 255.255.255.0 GigabitEthernet0/2 
+
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/2
+
+# Настройка NAT на R2
+
+ip nat inside source list 1 interface GigabitEthernet0/2 overload
+
+access-list 1 permit 192.168.2.0 0.0.0.255
+
+int g0/2
+
+ip address 10.53.5.2 255.255.255.0
+
+ip nat outside
+
+exit
+
+int g0/1.2
+
+ip nat inside
+
+exit
 
 # Базовая настройка коммутатора s2
 
@@ -720,6 +756,16 @@ ip address 10.53.2.1 255.255.255.0
 
 no shutdown
 
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/1 
+
+ip route 10.53.5.0 255.255.255.0 GigabitEthernet0/1 
+
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/0 
+
+ip route 10.53.5.0 255.255.255.0 GigabitEthernet0/2 
+
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/2
+
 # R4
 
 router ospf 1
@@ -727,14 +773,6 @@ router ospf 1
 network 10.53.2.0 0.0.0.255 area 0
 
 network 10.53.3.0 0.0.0.255 area 0
-
-network 10.53.5.0 0.0.0.255 area 0
-
-interface GigabitEthernet0/0
-
-ip address 10.53.5.1 255.255.255.0
-
-no shutdown
 
 interface GigabitEthernet0/1
 
@@ -747,6 +785,10 @@ interface GigabitEthernet0/2
 ip address 10.53.2.2 255.255.255.0
 
 no shutdown
+
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/2 
+
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/1 
 
 # R5
 
@@ -768,6 +810,10 @@ ip address 10.53.3.2 255.255.255.0
 
 no shutdown
 
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/1 
+
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/2
+
 # R6
 
 router ospf 1
@@ -780,7 +826,7 @@ network 10.53.5.0 0.0.0.255 area 0
 
 interface GigabitEthernet0/0
 
-ip address 10.53.5.2 255.255.255.0
+ip address 10.53.5.1 255.255.255.0
 
 no shutdown
 
@@ -796,3 +842,28 @@ ip address 10.53.4.1 255.255.255.0
 
 no shutdown
 
+ip route 10.53.0.0 255.255.255.0 GigabitEthernet0/1 
+
+ip route 192.168.2.0 255.255.255.0 GigabitEthernet0/0 
+
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/1 
+
+ip route 10.53.0.0 255.255.255.0 GigabitEthernet0/2
+
+ip route 192.168.1.0 255.255.255.0 GigabitEthernet0/2 
+
+
+
+network 10.53.1.0 0.0.0.255 area 0
+
+network 10.53.2.0 0.0.0.255 area 0
+
+network 10.53.0.0 0.0.0.255 area 0
+
+network 10.53.4.0 0.0.0.255 area 0
+
+network 10.53.5.0 0.0.0.255 area 0
+
+network 192.168.1.0 0.0.0.255 area 0
+
+network 192.168.2.0 0.0.0.255 area 0
