@@ -1,9 +1,11 @@
 # Лабораторная работа - Настройка маршрутизации между локальными сетями Router-on-a-Stick
 
 !
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/c2792ed9-0b63-4d6d-9ccf-4abb9c058916)
 
-![alt text](image-1.png)
+
+![image](https://github.com/user-attachments/assets/f029720e-4159-49f1-9417-7c1a2f288b56)
+
 
 # 1. Создание сети и настройка основных параметров устройств
 В части 1 вы настроите топологию сети и настроите основные параметры на хостах ПК и коммутаторах.
@@ -217,7 +219,8 @@ Copy run start
 **Шаг 4. Настройте узлы ПК.**
 
 !
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/68481c85-a83c-4a20-a2fc-da15629f2ebc)
+
 
 
 !
@@ -508,7 +511,8 @@ Do Copy run start
 
 **c.	Отправьте команду ping с компьютера PC-A на коммутатор S2.**
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/4e0705c1-d27c-4afb-ae5f-4d5104f57cfd)
+
 
 !
 
@@ -519,7 +523,8 @@ Do Copy run start
 
 **В окне командной строки на PC-B выполните команду tracert на адрес PC-A.**
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/47524951-dac2-4a42-a7b5-3dee27bfb7e0)
+
 !
 
 
