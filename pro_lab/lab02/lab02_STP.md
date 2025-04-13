@@ -1,7 +1,8 @@
 # **Лабораторная работа. Развертывание коммутируемой сети с резервными каналами**
 
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/77966d9a-9c4a-4555-b74d-e49b1dd5a947)
+
 !
 
 
@@ -201,11 +202,13 @@ Copy run start
 
 !
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/e6a6ab14-5348-4b1b-af2c-1a1bcc9fdbfe)
+
 
 !
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/dd31e4b3-b89d-4943-90a9-5a6ada1b35fc)
+
 
 !
 
@@ -247,7 +250,8 @@ no shutdown
 
 do show spanning-tree
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/aae6e538-0f27-45a5-af51-9353d1ef1714)
+
 
 
 
@@ -334,7 +338,8 @@ no shutdown
 
 do show spanning-tree
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/45f26ac2-5a1c-428f-82f1-ac64ec34ac5b)
+
 
 **Какой порт выбран протоколом STP в качестве порта корневого моста на каждом коммутаторе некорневого моста?**
 
